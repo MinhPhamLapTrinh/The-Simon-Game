@@ -56,8 +56,6 @@ $(document).keypress(function () {
 function checkAnswer(currentLevel) {
   if (userClickedPattern[currentLevel] === gamePattern[currentLevel]) {
     if (userClickedPattern.length === gamePattern.length) {
-      console.log(userClickedPattern);
-      console.log(gamePattern);
       setTimeout(function () {
         nextSequence();
       }, 1000);
