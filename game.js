@@ -52,14 +52,6 @@ $(document).keypress(function () {
     started = true;
   }
 });
-// Allows users to tap on the screen.
-$(document).click(function () {
-  if (!started) {
-    $("#level-title").text("Level " + count);
-    nextSequence();
-    started = true;
-  }
-});
 
 function checkAnswer(currentLevel) {
   if (userClickedPattern[currentLevel] === gamePattern[currentLevel]) {
