@@ -53,6 +53,14 @@ $(document).keypress(function () {
   }
 });
 
+$(document).click(function () {
+  if (!started) {
+    $("#level-title").text("Level " + count);
+    nextSequence();
+    started = true;
+  }
+});
+
 function checkAnswer(currentLevel) {
   if (userClickedPattern[currentLevel] === gamePattern[currentLevel]) {
     if (userClickedPattern.length === gamePattern.length) {
